@@ -2,5 +2,5 @@
 title: "🦥 Ritza"
 enableToc: false
 ---
-
-[[notes/Barefoot|Barefoot Running]] 
+Some things about running:
+- [[notes/Barefoot|Barefoot Running]] 
