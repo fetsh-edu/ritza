@@ -21,7 +21,7 @@ html {
 }
 
 .singlePage {
-  padding: 4em 30vw;
+  padding: 4em 20vw;
   margin: 0 auto;
   max-width: 1000px;
   @media all and (max-width: 1200px) {
@@ -69,6 +69,8 @@ p, ul, text, a, tr, td, li, ol, ul {
 
 tbody, li, p {
   line-height: 1.5em;
+  font-size: 1.1em;
+  font-optical-sizing: auto;
 }
 
 .mainTOC {

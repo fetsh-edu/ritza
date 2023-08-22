@@ -1,7 +1,6 @@
 ---
 title: "Не справляюсь с интервалами"
 tags:
-- qa
 - intervals
 - strofilov
 enableToc: false
