@@ -3,6 +3,7 @@ title: "Тест на стельку"
 tags:
 - shoes
 enableToc: false
+publishDate: 2023-08-24
 ---
 
 Тест из книги [[books/Jay Dicharry - Anatomy for Runners|Jay Dicharry - Anatomy for Runners]]: 

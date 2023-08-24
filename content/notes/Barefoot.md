@@ -7,6 +7,7 @@ tags:
 - drop
 - shoes
 enableToc: true
+publishDate: 2023-08-22
 ---
 
 ## Первая пробежка
