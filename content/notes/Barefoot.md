@@ -5,6 +5,7 @@ tags:
 - cushioning
 - пятка_носок
 - drop
+- shoes
 enableToc: true
 ---
 
