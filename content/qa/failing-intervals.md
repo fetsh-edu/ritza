@@ -4,6 +4,7 @@ tags:
 - intervals
 - strofilov
 enableToc: false
+updated: 2023-08-23 17:00
 ---
 
 ### Вопрос

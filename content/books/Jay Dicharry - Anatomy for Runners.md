@@ -14,7 +14,7 @@ tags:
 - barefoot
 - пятка_носок
 enableToc: true
-publishDate: 2023-08-24
+updated: 2023-08-24 22:00
 ---
 ![[Attachments/Dicharry_Anatomy.jpg]]
 ## Об авторе
