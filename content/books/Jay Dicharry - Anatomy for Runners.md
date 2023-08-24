@@ -15,7 +15,7 @@ tags:
 - пятка_носок
 enableToc: true
 ---
-
+![[Attachments/Dicharry_Anatomy.jpg]]
 ### Об авторе
 
 Jay Dicharry , MPT, SCS, is the Director of the SPEED Clinic and the Motion Analysis Lab at the University of Virginia. Originally from New Orleans, Jay received his Masters of Physical Therapy degree at Louisiana State University Medical Center. He is an instructor in the Sports Medicine program and Physical Medicine and Rehabilitation Residency at the University of Virginia. Jay is a Board Certified Sports Clinical Specialist, and a certified coach through both the United States Track and Field Association and the United States Cycling Federation. He is widely published in numerous professional journals on running gait and biomechanics, lectures nationally to clinicians and coaches on care of endurance athletes, conducts research on runners, and consults to individual, USA Track and Field and the US Air Force on athlete development. Jay has a competitive history in swimming, triathlon, cycling, and running events on both the local and national level, and has coached athletes from local standouts to national medalists. His passion is combining his personal, clinical, and research focus to help athletes achieve their full potential.
