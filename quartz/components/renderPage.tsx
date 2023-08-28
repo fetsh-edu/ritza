@@ -18,14 +18,17 @@ interface RenderComponents {
 export function pageResources(slug: FullSlug, staticResources: StaticResources): StaticResources {
   const baseDir = pathToRoot(slug)
 
-  const contentIndexPath = joinSegments(baseDir, "static/contentIndex.json")
+  const resourceSegments = (a: string, b: string): string =>
+    a === "." ? `/${b}` : joinSegments(a, b)
+
+  const contentIndexPath = resourceSegments(baseDir, "static/contentIndex.json")
   const contentIndexScript = `const fetchData = fetch(\`${contentIndexPath}\`).then(data => data.json())`
 
   return {
-    css: [joinSegments(baseDir, "index.css"), ...staticResources.css],
+    css: [resourceSegments(baseDir, "index.css"), ...staticResources.css],
     js: [
       {
-        src: joinSegments(baseDir, "prescript.js"),
+        src: resourceSegments(baseDir, "prescript.js"),
         loadTime: "beforeDOMReady",
         contentType: "external",
       },
@@ -37,7 +40,7 @@ export function pageResources(slug: FullSlug, staticResources: StaticResources):
       },
       ...staticResources.js,
       {
-        src: joinSegments(baseDir, "postscript.js"),
+        src: resourceSegments(baseDir, "postscript.js"),
         loadTime: "afterDOMReady",
         moduleType: "module",
         contentType: "external",
