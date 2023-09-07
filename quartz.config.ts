@@ -10,7 +10,8 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     baseUrl: "ritza.fetsh.me",
-    ignorePatterns: ["private", "templates"],
+    ignorePatterns: ["private", "templates", ".obsidian"],
+    defaultDateType: "modified",
     theme: {
       typography: {
         header: "Schibsted Grotesk",
@@ -68,6 +69,7 @@ const config: QuartzConfig = {
       }),
       Plugin.Assets(),
       Plugin.Static(),
+      Plugin.NotFoundPage(),
     ],
   },
 }
