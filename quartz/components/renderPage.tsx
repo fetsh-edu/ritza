@@ -31,7 +31,7 @@ export function pageResources(
         css: [joinSegments(baseDir, "index.css"), ...staticResources.css],
         js: [
             {
-                src: joinSegments(baseDir, "prescript.js"),
+                src: joinSegments(baseDir, "prescript.js?date="+(new Date()).toISOString()),
                 loadTime: "beforeDOMReady",
                 contentType: "external",
             },
@@ -43,7 +43,7 @@ export function pageResources(
             },
             ...staticResources.js,
             {
-                src: joinSegments(baseDir, "postscript.js"),
+                src: joinSegments(baseDir, "postscript.js?date="+(new Date()).toISOString()),
                 loadTime: "afterDOMReady",
                 moduleType: "module",
                 contentType: "external",
