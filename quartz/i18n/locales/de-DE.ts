@@ -56,6 +56,9 @@ export default {
     contentMeta: {
       readingTime: ({ minutes }) => `${minutes} min read`,
     },
+    tags: {
+      title: "Tags"
+    }
   },
   pages: {
     rss: {
