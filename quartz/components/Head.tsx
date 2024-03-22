@@ -35,10 +35,10 @@ export default (() => {
         <meta property="og:width" content="1200" />
         <meta property="og:height" content="675" />
         <link rel="icon" href={iconPath} />
-          <meta name="description" content={description} />
+        <meta name="description" content={description} />
         <meta name="generator" content="Quartz" />
         {css.map((href) => (
-          <link key={href} href={href} rel="stylesheet" type="text/css" spa-preserve />
+          <link key={href} href={(href+"?date="+(new Date()).toISOString())} rel="stylesheet" type="text/css" spa-preserve />
         ))}
         {js
           .filter((resource) => resource.loadTime === "beforeDOMReady")
