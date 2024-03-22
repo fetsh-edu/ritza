@@ -1,0 +1,23 @@
+.content-meta {
+  max-width: 48rem;
+  margin: 2rem auto 0;
+  padding: 0 1.5rem;
+  color: var(--gray);
+
+  &[show-comma="true"] {
+    > time:not(:last-child) {
+      margin-right: 8px;
+
+      &::after {
+        content: ",";
+      }
+    }
+  }
+}
+.content-meta:after {
+  content: "";
+  border-bottom: 0.05rem solid var(--lightgray);
+  display: block;
+  width: 100%;
+  padding-top: 0.5rem;
+}

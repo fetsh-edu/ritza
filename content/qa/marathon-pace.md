@@ -1,11 +1,11 @@
 ---
-title: "«Темп марафона» на тренировках"
+title: «Темп марафона» на тренировках
 tags:
-- strofilov
-- pacing
-- competition
+  - strofilov
+  - pacing
+  - competition
 enableToc: false
-updated: 2023-08-23 18:00
+created: 2023-08-23 18:00
 ---
 ### Вопрос
 

@@ -1,10 +1,10 @@
 ---
-title: "Нужно ли поесть перед рабочей тренировкой"
+title: Нужно ли поесть перед рабочей тренировкой
 tags:
-- strofilov
-- nutrition
+  - strofilov
+  - nutrition
 enableToc: false
-updated: 2023-09-05 14:00
+created: 2023-09-05 14:00
 ---
 ### Вопрос
 

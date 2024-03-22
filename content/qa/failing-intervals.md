@@ -1,10 +1,10 @@
 ---
-title: "Не справляюсь с интервалами"
+title: Не справляюсь с интервалами
 tags:
-- intervals
-- strofilov
+  - intervals
+  - strofilov
 enableToc: false
-updated: 2023-08-23 17:00
+created: 2023-08-23 17:00
 ---
 
 ### Вопрос

@@ -2,26 +2,29 @@
 
 ul.section-ul {
   list-style: none;
-  margin-top: 2em;
   padding-left: 0;
 }
 
 li.section-li {
-  margin-bottom: 1em;
+  margin-bottom: 0.3rem;
 
-  & > .section {
+  &.section {
     display: grid;
-    grid-template-columns: 6em 3fr 1fr;
+    grid-template-columns: 6rem 1fr;
+    gap: 0 0;
+    grid-template-areas: "date title";
+
+    time {
+      grid-area: date;
+    }
+    .desc {
+      grid-area: title;
+    }
 
     @media all and (max-width: $mobileBreakpoint) {
       & > .tags {
         display: none;
       }
-    }
-
-    & > .tags {
-      justify-self: end;
-      margin-left: 1rem;
     }
 
     & > .desc > h3 > a {

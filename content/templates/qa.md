@@ -1,9 +1,9 @@
 ---
-title: ""
+title: 
 tags:
-- strofilov
+  - strofilov
 enableToc: false
-updated: <% tp.file.last_modified_date("YYYY-MM-DD HH:mm:ss") %>
+created: <% tp.file.last_modified_date("YYYY-MM-DD HH:mm:ss") %>
 ---
 
 ### Вопрос

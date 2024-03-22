@@ -1,11 +1,11 @@
 ---
-title: "Как определить целевой темп для соревнований?"
+title: Как определить целевой темп для соревнований?
 tags:
-- competition
-- pacing
-- strofilov
+  - competition
+  - pacing
+  - strofilov
 enableToc: false
-updated: 2023-08-23 16:00
+created: 2023-08-23 16:00
 ---
 
 ### Вопрос

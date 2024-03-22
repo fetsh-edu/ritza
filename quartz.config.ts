@@ -1,33 +1,39 @@
 import { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
 
+/**
+ * Quartz 4.0 Configuration
+ *
+ * See https://quartz.jzhao.xyz/configuration for more information.
+ */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "🦥 Ritza",
-    enableSPA: true,
-    enablePopovers: true,
-    analytics: {
-      provider: "plausible",
-    },
-    baseUrl: "ritza.fetsh.me",
+    pageTitle: "sloths.run",
+    enableSPA: false,
+    enablePopovers: false,
+    analytics: null,
+    baseUrl: "sloths.run",
+    locale: "ru-RU",
     ignorePatterns: ["private", "templates", ".obsidian"],
-    defaultDateType: "modified",
+    defaultDateType: "created",
     theme: {
+      fontOrigin: "local",
+      cdnCaching: false,
       typography: {
-        header: "Schibsted Grotesk",
-        body: "Source Sans Pro",
+        header: "Verdana",
+        body: "Georgia",
         code: "IBM Plex Mono",
       },
       colors: {
         lightMode: {
-          light: "#faf8f8",
+          light: "white",
           lightgray: "#e5e5e5",
           gray: "#b8b8b8",
           darkgray: "#4e4e4e",
-          dark: "#2b2b2b",
+          dark: "black",
           secondary: "#284b63",
           tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
+          highlight: "#7bff001f",
         },
         darkMode: {
           light: "#161618",
@@ -45,21 +51,27 @@ const config: QuartzConfig = {
   plugins: {
     transformers: [
       Plugin.FrontMatter(),
-      Plugin.TableOfContents(),
       Plugin.CreatedModifiedDate({
-        priority: ["frontmatter", "filesystem"], // you can add 'git' here for last modified from Git but this makes the build slower
+        priority: ["frontmatter", "filesystem"],
       }),
-      Plugin.SyntaxHighlighting(),
-      Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
+      // Plugin.Latex({ renderEngine: "katex" }),
+      Plugin.SyntaxHighlighting({
+        theme: {
+          light: "github-light",
+          dark: "github-dark",
+        },
+        keepBackground: false,
+      }),
+      Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false, mermaid: false }),
       Plugin.GitHubFlavoredMarkdown(),
+      Plugin.TableOfContents(),
       Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
-      Plugin.Latex({ renderEngine: "katex" }),
       Plugin.Description(),
     ],
     filters: [Plugin.RemoveDrafts()],
     emitters: [
       Plugin.AliasRedirects(),
-      Plugin.ComponentResources({ fontOrigin: "googleFonts" }),
+      Plugin.ComponentResources(),
       Plugin.ContentPage(),
       Plugin.FolderPage(),
       Plugin.TagPage(),

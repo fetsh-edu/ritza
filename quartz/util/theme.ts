@@ -9,20 +9,27 @@ export interface ColorScheme {
   highlight: string
 }
 
+interface Colors {
+  lightMode: ColorScheme
+  darkMode: ColorScheme
+}
+
 export interface Theme {
   typography: {
     header: string
     body: string
     code: string
   }
-  colors: {
-    lightMode: ColorScheme
-    darkMode: ColorScheme
-  }
+  cdnCaching: boolean
+  colors: Colors
+  fontOrigin: "googleFonts" | "local"
 }
+
+export type ThemeKey = keyof Colors
 
 const DEFAULT_SANS_SERIF =
   '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif'
+const DEFAULT_SERIF = "\"Times New Roman\", Times, serif"
 const DEFAULT_MONO = "ui-monospace, SFMono-Regular, SF Mono, Menlo, monospace"
 
 export function googleFontHref(theme: Theme) {
@@ -45,7 +52,7 @@ ${stylesheet.join("\n\n")}
   --highlight: ${theme.colors.lightMode.highlight};
 
   --headerFont: "${theme.typography.header}", ${DEFAULT_SANS_SERIF};
-  --bodyFont: "${theme.typography.body}", ${DEFAULT_SANS_SERIF};
+  --bodyFont: "${theme.typography.body}", ${DEFAULT_SERIF};
   --codeFont: "${theme.typography.code}", ${DEFAULT_MONO};
 }
 

@@ -1,5 +1,5 @@
 ---
-title: "🦥 Ritza"
+title: sloth.run
 enableToc: false
 ---
 

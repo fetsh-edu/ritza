@@ -1,11 +1,11 @@
 ---
-title: "Нужно ли часто стартовать?"
+title: Нужно ли часто стартовать?
 tags:
-- strofilov
-- race
-- strategies
+  - strofilov
+  - race
+  - strategies
 enableToc: false
-updated: 2023-09-05 14:30
+created: 2023-09-05 14:30
 ---
 
 ### Вопрос
