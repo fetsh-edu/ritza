@@ -1,7 +1,7 @@
 @use "../../styles/variables.scss" as *;
 
 .graph {
-  max-width: 48rem;
+  max-width: $pageWidth;
   margin: 0 auto 2rem;
   padding: 0 1.5rem;
   & > h3 {

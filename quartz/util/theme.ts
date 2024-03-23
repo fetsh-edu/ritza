@@ -1,12 +1,13 @@
 export interface ColorScheme {
-  light: string
-  lightgray: string
-  gray: string
-  darkgray: string
-  dark: string
-  secondary: string
-  tertiary: string
-  highlight: string
+    accent: string
+    light: string
+    lightgray: string
+    gray: string
+    darkgray: string
+    dark: string
+    secondary: string
+    tertiary: string
+    highlight: string
 }
 
 interface Colors {
@@ -50,6 +51,7 @@ ${stylesheet.join("\n\n")}
   --secondary: ${theme.colors.lightMode.secondary};
   --tertiary: ${theme.colors.lightMode.tertiary};
   --highlight: ${theme.colors.lightMode.highlight};
+  --accent: ${theme.colors.lightMode.accent};
 
   --headerFont: "${theme.typography.header}", ${DEFAULT_SANS_SERIF};
   --bodyFont: "${theme.typography.body}", ${DEFAULT_SERIF};
@@ -65,6 +67,7 @@ ${stylesheet.join("\n\n")}
   --secondary: ${theme.colors.darkMode.secondary};
   --tertiary: ${theme.colors.darkMode.tertiary};
   --highlight: ${theme.colors.darkMode.highlight};
+  --accent: ${theme.colors.darkMode.accent};
 }
 `
 }

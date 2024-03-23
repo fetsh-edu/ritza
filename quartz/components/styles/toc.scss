@@ -58,3 +58,36 @@ button#toc {
     }
   }
 }
+ul.overflow-500,
+ol.overflow-500 {
+    height: 500px;
+    overflow-y: auto;
+
+    li {
+        line-height: 1.1rem;
+    }
+    li + li {
+        margin-top: 0.6rem;
+    }
+
+    // clearfix
+    content: "";
+    clear: both;
+
+    & > li:last-of-type {
+        margin-bottom: 50px;
+    }
+
+    &:after {
+        pointer-events: none;
+        content: "";
+        width: 100%;
+        height: 50px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        opacity: 1;
+        transition: opacity 0.3s ease;
+        background: linear-gradient(transparent 0px, var(--light));
+    }
+}

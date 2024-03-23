@@ -1,6 +1,7 @@
+@use "../../styles/variables.scss" as *;
 .backlinks {
   position: relative;
-  max-width: 48rem;
+  max-width: $pageWidth;
   margin: 0 auto 0;
   padding: 0 1.5rem;
 

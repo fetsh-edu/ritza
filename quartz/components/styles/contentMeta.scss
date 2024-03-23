@@ -1,8 +1,10 @@
+@use "../../styles/variables.scss" as *;
+
 .content-meta {
-  max-width: 48rem;
+  max-width: $pageWidth;
   margin: 2rem auto 0;
   padding: 0 1.5rem;
-  color: var(--gray);
+  color: var(--gray) !important;
 
   &[show-comma="true"] {
     > time:not(:last-child) {

@@ -3,61 +3,63 @@
 @use "./callouts.scss";
 
 html {
-  scroll-behavior: smooth;
-  width: 100%;
-  @media all and (max-width: $fullPageWidth) {
+    scroll-behavior: smooth;
+    width: 100%;
     font-size: 13px;
-  }
+    @media only screen and (min-width: 768px) {
+        font-size: 16px;
+    }
 }
 
 body,
 section {
-  margin: 0;
-  max-width: 100%;
-  box-sizing: border-box;
-  background-color: var(--light);
-  font-family: var(--bodyFont);
-  color: var(--darkgray);
+    margin: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    background-color: var(--light);
+    font-family: var(--bodyFont);
+    color: var(--darkgray);
 }
 
-.text-highlight {
-  background-color: #fff23688;
-  padding: 0 0.1rem;
-  border-radius: 5px;
+mark {
+    background-color: color-mix(in srgb, yellow 50%, transparent);
+    padding: 0.2rem 0.2rem;
+    border-radius: 0;
 }
 
 ::selection {
-  background: color-mix(in srgb, var(--tertiary) 60%, rgba(255, 255, 255, 0));
-  color: var(--darkgray);
+    background: color-mix(in srgb, yellow 50%, transparent);
+    color: var(--dark);
 }
 
-p,
-ul,
-text,
-a,
-tr,
-td,
-li,
-ol,
-ul,
-.katex,
-.math {
-  color: var(--dark);
-  fill: var(--dark);
-  overflow-wrap: anywhere;
-  hyphens: auto;
+article {
+    p,
+    ul,
+    text,
+    a,
+    tr,
+    td,
+    li,
+    ol,
+    ul,
+    .katex,
+    .math {
+        color: var(--dark);
+        fill: var(--dark);
+        overflow-wrap: anywhere;
+        hyphens: auto;
+    }
 }
 
 .math {
-  &.math-display {
-    text-align: center;
-  }
+    &.math-display {
+        text-align: center;
+    }
 }
 
 strong {
-  font-weight: $semiBoldWeight;
+    font-weight: $semiBoldWeight;
 }
-
 
 a {
   font-weight: $normalWeight;
@@ -109,45 +111,13 @@ a {
   }
 }
 
-header {
-  @media all and (max-width: $fullPageWidth) {
-    gap: 0;
-    align-items: center;
-    padding: 0;
-  }
-}
-header > a {
-  @media all and (max-width: $fullPageWidth) {
-    width: initial;
-  }
-}
-header img {
-  @media all and (max-width: $fullPageWidth) {
-    margin: 0.6rem;
-  }
-}
-header h1 {
-  @media all and (max-width: $fullPageWidth) {
-    text-align: left;
-  }
-}
-
-//.article-footer {
-//  padding-right: 1.5rem;
-//  padding-left: 1.5rem;
-//}
 .tags-page,
 .page-listing,
 article {
   font-size: 1.2rem;
   padding-right: 1.5rem;
   padding-left: 1.5rem;
-  & > p,
-  & > ul,
-  & > ol,
-  & > blockquote {
-    line-height: 2rem;
-  }
+  line-height: 2rem;
   & h1,
   & h2,
   & h3,
@@ -160,31 +130,24 @@ article {
   & blockquote,
   section.footnotes,
   .constraint {
-    max-width: 48rem;
+    max-width: $pageWidth;
     margin-left: auto;
     margin-right: auto;
   }
   & > ul,
   & > ol {
-    max-width: 46rem;
+    max-width: calc($pageWidth - 2rem);
     padding-left: 2rem;
   }
   & > blockquote {
-    max-width: 47rem;
+    max-width: calc(calc($pageWidth - $thickBorder) - 1rem);
   }
   & blockquote.callout {
-    max-width: 48rem;
+    max-width: $pageWidth;
   }
 }
 
-.page {
-  @media all and (max-width: $fullPageWidth) {
-    margin: 0 auto;
-    padding: 0 1rem;
-    max-width: $pageWidth;
-  }
-
-  & article {
+article {
     & > h1 {
       font-size: 2rem;
     }
@@ -208,75 +171,6 @@ article {
     p > strong {
       color: var(--dark);
     }
-  }
-
-  & > #quartz-body {
-    width: 100%;
-    display: flex;
-    @media all and (max-width: $fullPageWidth) {
-      flex-direction: column;
-    }
-
-    & .sidebar {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      top: 0;
-      width: $sidePanelWidth;
-      margin-top: $topSpacing;
-      box-sizing: border-box;
-      padding: 0 4rem;
-      position: fixed;
-      @media all and (max-width: $fullPageWidth) {
-        position: initial;
-        flex-direction: row;
-        padding: 0;
-        width: initial;
-        margin-top: 2rem;
-      }
-    }
-
-    & .sidebar.left {
-      left: calc(calc(100vw - $pageWidth) / 2 - $sidePanelWidth);
-      @media all and (max-width: $fullPageWidth) {
-        gap: 0;
-        align-items: center;
-      }
-    }
-
-    & .sidebar.right {
-      right: calc(calc(100vw - $pageWidth) / 2 - $sidePanelWidth);
-      flex-wrap: wrap;
-      & > * {
-        @media all and (max-width: $fullPageWidth) {
-          flex: 1;
-          min-width: 140px;
-        }
-      }
-    }
-  }
-
-  & .page-header {
-    width: $pageWidth;
-    margin: $topSpacing auto 0 auto;
-    @media all and (max-width: $fullPageWidth) {
-      width: initial;
-      margin-top: 2rem;
-    }
-  }
-
-  & .center,
-  & footer {
-    margin-left: auto;
-    margin-right: auto;
-    width: $pageWidth;
-    @media all and (max-width: $fullPageWidth) {
-      width: initial;
-      margin-left: 0;
-      margin-right: 0;
-    }
-  }
 }
 
 .footnotes {
@@ -543,7 +437,7 @@ video {
 
 ul.overflow,
 ol.overflow {
-  max-height: 400;
+  max-height: 400px;
   overflow-y: auto;
 
   // clearfix
