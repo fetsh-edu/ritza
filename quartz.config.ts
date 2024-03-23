@@ -11,7 +11,7 @@ const config: QuartzConfig = {
     pageTitle: "sloths.run",
     enableSPA: false,
     enablePopovers: false,
-    analytics: null,
+    analytics: {provider: "umami", websiteId: "3e3b7e36-13a0-4624-9c9e-53e0ca916d85", host: "https://analytics.eu.umami.is"},
     baseUrl: "sloths.run",
     locale: "ru-RU",
     ignorePatterns: ["private", "templates", ".obsidian"],
