@@ -46,16 +46,19 @@ export default (() => {
             {ogImageAlt && <meta name="twitter:image:alt" content={ogImageAlt}/>}
 
             <link rel="icon" href={iconPath}/>
-            <link rel="canonical" href={canonicalURL} />
+            <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png"/>
+            <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png"/>
+            <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png"/>
+            <link rel="canonical" href={canonicalURL}/>
             <meta name="description" content={description}/>
             <meta name="generator" content="Love, Obsidian and Quartz"/>
-                {css.map((href) => (
-                    <link key={href} href={(href + "?date=" + (new Date()).toISOString())} rel="stylesheet"
-                          type="text/css" spa-preserve/>
-                ))}
-                {js
-                    .filter((resource) => resource.loadTime === "beforeDOMReady")
-                    .map((res) => JSResourceToScriptElement(res, true))}
+            {css.map((href) => (
+                <link key={href} href={(href + "?date=" + (new Date()).toISOString())} rel="stylesheet"
+                      type="text/css" spa-preserve/>
+            ))}
+            {js
+                .filter((resource) => resource.loadTime === "beforeDOMReady")
+                .map((res) => JSResourceToScriptElement(res, true))}
         </head>
     )
   }
