@@ -6,7 +6,7 @@ tags:
   - zones
 enableToc: false
 created: 2024-03-07 14:00
-image: Attachments/Pasted image 20240306163528.png
+image: Attachments/Pasted-image-20240306163528.png
 imageAlt: ""
 ---
 ## Метаболизм
