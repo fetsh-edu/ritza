@@ -5,6 +5,8 @@ code[data-theme*=" "] {
 
 code[data-theme*=" "] span {
   color: var(--shiki-light);
+  font-weight: var(--shiki-light-font-weight);
+  font-style: var(--shiki-light-font-style);
 }
 
 [saved-theme="dark"] code[data-theme*=" "] {
