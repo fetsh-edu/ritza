@@ -128,6 +128,7 @@ article {
   & ul,
   & ol,
   & blockquote,
+  & figure > figcaption,
   section.footnotes,
   .constraint {
     max-width: $pageWidth;
@@ -144,6 +145,20 @@ article {
   }
   & blockquote.callout {
     max-width: $pageWidth;
+  }
+    & figure {
+        text-align: center;
+        width: inherit;
+        margin: 0;
+    }
+  figure > img {
+      margin: 0;
+  }
+  figure > figcaption {
+      text-align: initial;
+      font-size: 1rem;
+      line-height: 1.1rem;
+      color: var(--darkgray);
   }
 }
 
@@ -282,10 +297,12 @@ h6 {
 }
 
 figure[data-rehype-pretty-code-figure] {
-  margin: 0;
+  text-align: left;
+  max-width: $pageWidth;
+  margin: 0 auto;
+  //margin: 0;
   position: relative;
   line-height: 1.6rem;
-  position: relative;
 
   & > [data-rehype-pretty-code-title] {
     font-family: var(--codeFont);
