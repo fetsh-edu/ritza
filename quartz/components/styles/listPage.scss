@@ -10,7 +10,7 @@ li.section-li {
 
   &.section {
     display: grid;
-    grid-template-columns: 6rem 1fr;
+    grid-template-columns: 6.5rem 1fr;
     gap: 0 0;
     grid-template-areas: "date title";
 
@@ -19,6 +19,9 @@ li.section-li {
     }
     .desc {
       grid-area: title;
+        a {
+            all: revert;
+        }
     }
 
     @media all and (max-width: $mobileBreakpoint) {

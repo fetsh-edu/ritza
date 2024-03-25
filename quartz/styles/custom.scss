@@ -80,15 +80,17 @@ section.footnotes h2,
 ul.section-ul {
     max-width: $pageWidth;
     padding-left: 0;
-    & > li.section-li > .section {
-        grid-template-columns: 6em 1fr;
-        & > .tags {
-            justify-self: left;
-            margin-left: 6rem;
-            margin-top: 0.5rem;
-            grid-column-start: span 2;
-            a.tag-link {
-                color: var(--tertiary);
+    & > li.section-li {
+        & > .section {
+            grid-template-columns: 6em 1fr;
+            & > .tags {
+                justify-self: left;
+                margin-left: 6rem;
+                margin-top: 0.5rem;
+                grid-column-start: span 2;
+                a.tag-link {
+                    color: var(--tertiary);
+                }
             }
         }
     }
