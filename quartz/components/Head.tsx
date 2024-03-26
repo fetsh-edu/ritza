@@ -33,14 +33,12 @@ export default (() => {
             )}
             <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-            {/*Essential META Tags*/}
             <meta property="og:title" content={title}/>
             <meta property="og:type" content="article"/>
             {cfg.baseUrl && <meta property="og:image" content={ogImagePath}/>}
             {cfg.baseUrl && <meta property="og:url" content={canonicalURL}/>}
             <meta name="twitter:card" content="summary_large_image"/>
 
-            {/*Non-Essential, But Recommended*/}
             <meta property="og:description" content={description}/>
             <meta property="og:site_name" content={pageTitle}/>
             {ogImageAlt && <meta name="twitter:image:alt" content={ogImageAlt}/>}

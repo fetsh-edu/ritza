@@ -1,5 +1,5 @@
 ---
-title: sloth.run
+title: sloths.run
 enableToc: false
 ---
 
