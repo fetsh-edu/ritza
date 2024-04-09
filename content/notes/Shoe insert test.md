@@ -9,6 +9,23 @@ created: 2023-08-24 23:00
 
 > Так как нам очень важна стабильность, а она достигается, если мы говорим о стопе, через сводобную работу пальцев, особенно большого, то свобода пальцев, а значит ширина кроссовки — важный фактор при выборе беговой обуви. Предлагается следующий тест на стельку при покупке кроссовок: вынимаем стельку, ставим на нее ногу, ничего не должно свисать со стельки. Если не свисает, кроссовки можно брать.
 
+### April 2024
+
+За полгода с прошлого теста у меня добавились:
+1. Еще одна модель Saucony Kinvara, более новая,
+2. Vivobarefoot,
+3. Сандалии Adama,
+4. Saucony Hurricane, достал из старых запасов,
+5. Сандалии Zuzu,
+6. Синяки под ногтями от стартовых Adidas Adios PRO.
+
+![[Attachments/Insert-Kinvara-2.jpg]]
+![[Attachments/Insert-Vivo.jpg]]
+![[Attachments/Insert-Adama.jpg]]
+![[Attachments/Insert-Hurricane.jpg]]
+![[Attachments/Insert-Zuzu.jpg]]
+### August 2023
+
 В тесте приняли участие кроссовки, которые я нашел у себя под боком:
 1. Mizuno Wave Rider
 2. Nike Pegasus
@@ -20,6 +37,5 @@ created: 2023-08-24 23:00
 ![[Attachments/Insert-Kinvara.jpg]]
 ![[Attachments/Insert-Evoride.jpg]]
 ![[Attachments/Insert-Altra.jpg]]
-
 
 Ну, в общем, есть победитель....
