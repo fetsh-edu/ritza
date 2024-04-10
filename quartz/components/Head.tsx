@@ -52,11 +52,11 @@ export default (() => {
             <meta name="generator" content="Love, Obsidian and Quartz"/>
             {css.map((href) => (
                 <link key={href} href={(href + "?date=" + (new Date()).toISOString())} rel="stylesheet"
-                      type="text/css" spa-preserve/>
+                      type="text/css" />
             ))}
             {js
                 .filter((resource) => resource.loadTime === "beforeDOMReady")
-                .map((res) => JSResourceToScriptElement(res, true))}
+                .map((res) => JSResourceToScriptElement(res))}
         </head>
     )
   }

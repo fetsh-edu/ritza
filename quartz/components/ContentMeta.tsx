@@ -33,19 +33,19 @@ export default ((opts?: Partial<ContentMetaOptions>) => {
           segments.push(formatDate(getDate(cfg, fileData)!, cfg.locale))
       }
 
+      const segmentsElements = segments.map((segment) => <time>{segment}</time>)
+
       // Display reading time if enabled
       if (options.showReadingTime) {
         const { minutes, words: _words } = readingTime(text)
         const displayedTime = i18n(cfg.locale).components.contentMeta.readingTime({
           minutes: Math.ceil(minutes),
         })
-        segments.push(displayedTime)
+          segmentsElements.push( <span>{displayedTime}</span> )
       }
 
-      const segmentsElements = segments.map((segment) => <time>{segment}</time>)
-
       return (
-        <p show-comma={options.showComma} class={classNames(displayClass, "content-meta")}>
+        <p data-show-comma={options.showComma} class={classNames(displayClass, "content-meta")}>
           {segmentsElements}
         </p>
       )

@@ -38,7 +38,7 @@ export function pageResources(
             {
                 loadTime: "beforeDOMReady",
                 contentType: "inline",
-                spaPreserve: true,
+                spaPreserve: false,
                 script: contentIndexScript,
             },
             ...staticResources.js,

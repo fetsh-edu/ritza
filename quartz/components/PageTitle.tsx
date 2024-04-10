@@ -8,9 +8,9 @@ const PageTitle: QuartzComponent = ({ fileData, cfg, displayClass }: QuartzCompo
   const baseDir = pathToRoot(fileData.slug!)
   const root = (new URL(`https://${cfg.baseUrl ?? "example.com"}`)).pathname as FullSlug
   return (
-    <h1 class={classNames(displayClass)}>
+    <h2 class={classNames(displayClass)}>
       <a href={root}>{title}</a>
-    </h1>
+    </h2>
   )
 }
 

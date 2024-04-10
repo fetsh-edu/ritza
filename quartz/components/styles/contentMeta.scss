@@ -6,7 +6,7 @@
   padding: 0 1.5rem;
   color: var(--gray) !important;
 
-  &[show-comma="true"] {
+  &[data-show-comma="true"] {
     > time:not(:last-child) {
       margin-right: 8px;
 
