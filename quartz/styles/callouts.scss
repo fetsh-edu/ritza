@@ -120,9 +120,9 @@
 
 .callout-title {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 5px;
-  padding: 1rem 0;
+  padding: 1rem 0 0.4rem;
   color: var(--color);
 
   --icon-size: 18px;
