@@ -59,7 +59,7 @@ export function renderPage(
   components: RenderComponents,
   pageResources: StaticResources,
 ): string {
-  // make a deep copy of the tree so we don't remove the transclusion references
+  // make a deep copy of the tree, so we don't remove the transclusion references
   // for the file cached in contentMap in build.ts
   const root = clone(componentData.tree) as Root
 
@@ -231,10 +231,11 @@ export function renderPage(
                 {RightComponent}
             </Body>
             <Footer {...componentData} />
+            {pageResources.js
+                .filter((resource) => resource.loadTime === "afterDOMReady")
+                .map((res) => JSResourceToScriptElement(res))}
         </body>
-        {pageResources.js
-        .filter((resource) => resource.loadTime === "afterDOMReady")
-        .map((res) => JSResourceToScriptElement(res))}
+
     </html>
   )
 
