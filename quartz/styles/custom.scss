@@ -100,3 +100,29 @@ header a:active,
 header a:focus {
     -webkit-tap-highlight-color: rgba(0,0,0,0)
 }
+
+.recent-li {
+    article {
+        max-width: $pageWidth;
+        margin: 0 auto;
+        padding: 1rem 0;
+    }
+}
+.recent-li + .recent-li {
+    article {
+        border-top: .05rem solid var(--lightgray);
+    }
+}
+figure.card-right-small {
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    align-items: flex-start;
+    gap: 1rem;
+    img {
+        max-width: 16rem;
+        min-width: 16rem;
+        min-height: 9rem;
+        max-height: 12rem;
+        object-fit: cover;
+    }
+}
