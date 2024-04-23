@@ -45,26 +45,29 @@ export const Description: QuartzTransformerPlugin<Partial<Options> | undefined> 
             let currentDescriptionLength = 0
 
             if (sentences[0] !== undefined && sentences[0].length >= len) {
+
               const firstSentence = sentences[0].split(" ")
               while (currentDescriptionLength < len) {
                 const sentence = firstSentence[sentenceIdx]
-                if (!sentence) break
+
+                if (sentence == undefined) break
                 finalDesc.push(sentence)
+
                 currentDescriptionLength += sentence.length
                 sentenceIdx++
               }
               finalDesc.push("...")
             } else {
+
               while (currentDescriptionLength < len) {
                 const sentence = sentences[sentenceIdx]
-                if (!sentence) break
+                if (sentence == undefined) break
                 const currentSentence = sentence.endsWith(".") ? sentence : sentence + "."
                 finalDesc.push(currentSentence)
                 currentDescriptionLength += currentSentence.length
                 sentenceIdx++
               }
             }
-
             file.data.description = finalDesc.join(" ")
             file.data.text = text
           }
