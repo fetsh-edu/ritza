@@ -16,7 +16,7 @@ export default (() => {
     const path = url.pathname as FullSlug
     const baseDir = fileData.slug === "404" ? path : pathToRoot(fileData.slug!)
     const iconPath = joinSegments(baseDir, "static/logo.svg")
-    const ogImage = fileData.frontmatter?.image ?? "static/og-image.png"
+    const ogImage = fileData.image ?? "static/og-image.png"
     const canonicalURL = `https://${cfg.baseUrl}/${fileData.slug}`
     const ogImagePath = `https://${cfg.baseUrl}/${ogImage}`
     const ogImageAlt = fileData.frontmatter?.imageAlt as string
