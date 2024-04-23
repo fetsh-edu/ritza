@@ -1,20 +1,20 @@
 ---
-title: "Jay Dicharry - Anatomy for Runners"
+title: Jay Dicharry - Anatomy for Runners
 tags:
-- books
-- injuries
-- biomechanics
-- strength
-- stiffness
-- stretching
-- shoes
-- cushioning
-- drop
-- cadence
-- barefoot
-- пятка_носок
+  - books
+  - injuries
+  - biomechanics
+  - strength
+  - stiffness
+  - stretching
+  - shoes
+  - cushioning
+  - drop
+  - cadence
+  - barefoot
+  - пятка_носок
 enableToc: true
-updated: 2023-08-24 22:00
+created: 2023-08-24 22:00
 ---
 ![[Attachments/Dicharry_Anatomy.jpg]]
 ## Об авторе
