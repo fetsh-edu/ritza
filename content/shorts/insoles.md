@@ -45,8 +45,9 @@ imageAlt: ""
 - Получить second opinion о проблеме у врача, _который не продает стельки_. Если нужна рекомендация врача.
 - Обсудить проблему с человеком разбирающемся в реабилитации, которому ты доверяешь. У тебя такой есть. Я бы обратился к [Юрию Сдобникову](https://www.instagram.com/dr.sdobnikov/), если бы у меня такого не было. У него можно получить необходимый для реабилитации протокол упражнений.
 - Пройти [программу от Paragon Athletics](https://www.youtube.com/playlist?list=PLFQgdcz4m2ZHkjJMPzsrrPJTTYIbX69hs), от автора книги Pain and Performance.
+- Или поделать [упражения от Демченко](https://www.youtube.com/watch?v=jPC5OUhJQls) (Демченко в этом видео рекомендует и стельки, но он их продает, это стоит учитывать :)).
 
-А сам бы делал прогрессию calf-raises и прыжков на скакалке, пока боль не выше 4 из 10.
+А сам бы я делал прогрессию различных calf-raises и прыжков на скакалке, пока боль не выше 4 из 10.
 
 > [!caution] Obligatory disclaimer
 >  This blog is for general informational purposes only and does not constitute the practice of medicine, nursing or other professional health care services, including the giving of medical advice, and no doctor/patient relationship is formed. The use of information on this blog or materials linked from this blog is at the user’s own risk. The content of this blog is not intended to be a substitute for professional medical advice, diagnosis, or treatment. Users should not disregard, or delay in obtaining, medical advice for any medical condition they may have, and should seek the assistance of their health care professionals for any such conditions.
