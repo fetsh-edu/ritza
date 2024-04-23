@@ -1,83 +1,93 @@
 import { QuartzTransformerPlugin } from "../types"
-import {SKIP, visit} from "unist-util-visit"
-import {ElementContent, Root} from "hast";
+import { visit} from "unist-util-visit"
+import { ElementContent, Root as HtmlRoot } from "hast";
+import { Root as MarkDownRoot } from "mdast";
 
+const calloutRegex = new RegExp(/^\[!(figure)]([+-]?)/)
+const isImage = (ec : ElementContent) => { return ec.type == "element" && ec.tagName == "img"};
+const isFigure = (ec : ElementContent) => { return ec.type == "raw" && ec.value.includes('<div class="callout-title-inner"><p>Figure</p></div>') }
 export const Figures: QuartzTransformerPlugin = () => {
     return {
         name: "ImageToFigureProcessing",
-        htmlPlugins(ctx) {
+        htmlPlugins() {
             return [
                 () => {
-                    return (tree: Root, file) => {
+                    return (tree: HtmlRoot, _file) => {
                         visit(
                             tree,
+                            // only visit p tags that contain an img element
                             "element",
-                            (node, index, parent) => {
-                            if (
-                                node.tagName === "img" &&
-                                node.properties?.alt &&
-                                parent &&
-                                parent.type === "element" &&
-                                parent.tagName === "p" &&
-                                index != undefined
-                                ) {
-                                const caption = node.properties?.alt as string
-                                const fig : ElementContent = {
-                                    type: 'element',
-                                    tagName: 'figure',
-                                    properties: {},
-                                    children: [
-                                        node,
-                                        {
+                            node => {
+                                if (node.tagName == "blockquote") {
+                                    if (isFigure(node.children[1])) {
+                                        let firstPWithImage : ElementContent | undefined;
+                                        let otherElements : ElementContent[] = [];
+                                        const elements = node.children.filter((ch) => ch.type == "element")
+                                        elements.forEach((ch, ind) => {
+                                            if (ind == 0 && ch.type == "element" && ch.tagName == "p" && ch.children.some((sch) => isImage(sch))) {
+                                                firstPWithImage = ch;
+                                            } else {
+                                                otherElements.push(ch)
+                                            }
+                                        })
+                                        if (firstPWithImage && firstPWithImage.type == "element") {
+                                            let image : ElementContent | undefined;
+                                            let withImage : ElementContent[] = [];
+                                            firstPWithImage.children.forEach((ch, ind) => {
+                                                if (ind == 0 && isImage(ch)) {
+                                                    image = ch
+                                                } else {
+                                                    withImage.push(ch)
+                                                }
+                                            })
+                                            if (image) {
+                                                const captions = [...withImage, ...otherElements]
+                                                const caption : ElementContent = {
+                                                    type: "element",
+                                                    tagName: "figcaption",
+                                                    properties: {},
+                                                    children: captions
+                                                }
+                                                node.tagName = "figure"
+                                                node.children = [image, caption]
+                                                node.properties = {
+                                                    className: "constrained"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                if (node.tagName === "p") {
+                                    let firstImage;
+                                    let moreImages : ElementContent[] = [];
+                                    let notImages : ElementContent[] = [];
+                                    node.children.forEach((ch, ind) => {
+                                        if (ind == 0) {
+                                            if (isImage(ch)) {
+                                                firstImage = ch
+                                            }
+                                        } else {
+                                            if (isImage(ch)) {
+                                                moreImages.push(ch)
+                                            } else {
+                                                notImages.push(ch)
+                                            }
+                                        }
+                                    })
+                                    if (firstImage && moreImages.length == 0 && notImages.length > 0) {
+                                        const caption : ElementContent = {
                                             type: "element",
                                             tagName: "figcaption",
                                             properties: {},
-                                            children: [
-                                                {
-                                                    type: "text",
-                                                    value: caption
-                                                }
-                                            ]
+                                            children: notImages
                                         }
-                                    ]
+                                        node.tagName = "figure"
+                                        node.children = [firstImage, caption]
+                                    }
                                 }
-                                // const emptyDiv : ElementContent = {
-                                //     type: 'element',
-                                //     tagName: 'div',
-                                //     properties: {},
-                                //     children: []
-                                // }
-                                // const emptySpan : ElementContent = {
-                                //     type: 'element',
-                                //     tagName: 'span',
-                                //     properties: {},
-                                //     children: []
-                                // }
-                                // node.tagName = "figure"
-                                // node.children = [
-                                //     {
-                                //         type: "element",
-                                //         tagName: "img",
-                                //         properties: node.properties,
-                                //         children: []
-                                //     },
-                                //     {
-                                //         type: "element",
-                                //         tagName: "figcaption",
-                                //         properties: {},
-                                //         children: [
-                                //             {
-                                //                 type: "text",
-                                //                 value: caption
-                                //             }
-                                //         ]
-                                //     }
-                                // ]
-
-                                parent.children.splice(index, 1, fig)
-                                return SKIP
                             }
-                        })
+                        );
                     }
                 }
             ]
