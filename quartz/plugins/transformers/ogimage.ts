@@ -17,7 +17,13 @@ export const OgImage: QuartzTransformerPlugin = () => {
                                 firstImage = node;
                             }
                         })
-                        file.data.image = frontMatterImage ?? firstImage?.url
+                        if (typeof frontMatterImage == "string" && frontMatterImage.trim() != "") {
+                            file.data.image = frontMatterImage
+                        } else {
+                            file.data.image =  firstImage?.url
+                        }
+
+
                     }
                 }
             ]
