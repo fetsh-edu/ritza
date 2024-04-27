@@ -126,3 +126,35 @@ figure.card-right-small {
         object-fit: cover;
     }
 }
+article.card {
+    a {
+        text-decoration: none;
+        border: 0;
+        background-color: initial;
+        padding: 0;
+        & > figure {
+            & > figcaption {
+                font-size: 1.1rem;
+                line-height: 1.2rem;
+                color: var(--darkgray);
+                & > h3 {
+                    margin-top: 0;
+                    margin-bottom: 0.6rem;
+                    font-size: 1.6rem;
+                    line-height: 1.5rem;
+                    a {
+                    }
+                }
+                & > footer {
+                    background-color: inherit;
+                    text-align: left;
+                    padding: 0;
+                    margin-top: 0.5rem;
+                    time {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}

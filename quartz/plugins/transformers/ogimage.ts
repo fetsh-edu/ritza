@@ -22,8 +22,6 @@ export const OgImage: QuartzTransformerPlugin = () => {
                         } else {
                             file.data.image =  firstImage?.url
                         }
-
-
                     }
                 }
             ]
