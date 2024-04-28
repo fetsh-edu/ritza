@@ -14,6 +14,9 @@ body {
 #quartz-body {
     flex: 1;
 }
+.article-footer {
+    padding: 0 1.5rem;
+}
 section.footnotes {
     li {
         color: var(--darkgray);
@@ -124,6 +127,12 @@ figure.card-right-small {
         min-height: 9rem;
         max-height: 12rem;
         object-fit: cover;
+        @media all and (max-width: $pageWidth) {
+            max-width: 6rem;
+            min-width: 6rem;
+            min-height: 6rem;
+            max-height: 6rem;
+        }
     }
 }
 article.card {
