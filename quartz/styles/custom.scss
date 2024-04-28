@@ -121,6 +121,9 @@ figure.card-right-small {
     flex-flow: row-reverse nowrap;
     align-items: flex-start;
     gap: 1rem;
+    @media all and (max-width: $pageWidth) {
+        display: block;
+    }
     img {
         max-width: 16rem;
         min-width: 16rem;
@@ -132,6 +135,8 @@ figure.card-right-small {
             min-width: 6rem;
             min-height: 6rem;
             max-height: 6rem;
+            float: right;
+            margin: 0 0.6rem;
         }
     }
 }
