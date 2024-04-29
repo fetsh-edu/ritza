@@ -174,11 +174,15 @@ article.card {
     }
 }
 article {
-    a.internal {
+    a {
         all: revert;
+        text-underline-offset: 0.15em;
+        text-decoration: underline;
+        text-decoration-thickness: 0.05em;
+    }
+    a.internal {
     }
     a.external {
-        all: revert;
         &:after {
             display: inline-block;
             content: "⎋";
