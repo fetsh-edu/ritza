@@ -62,19 +62,17 @@ strong {
 }
 
 a {
-  font-weight: $normalWeight;
-  text-underline-offset: 0.2em;
-  text-decoration: underline;
-  text-decoration-thickness: 0.05em;
-  color: var(--dark);
+  //font-weight: $normalWeight;
+  //text-underline-offset: 0.2em;
+  //text-decoration: underline;
+  //text-decoration-thickness: 0.05em;
+  //color: var(--dark);
 
-  &:hover {
-    color: inherit;
-  }
+  //&:hover {
+  //  color: inherit;
+  //}
 
   &.internal {
-    background-color: var(--highlight);
-    padding: 0 0.2rem;
     &:has(> img) {
       background-color: transparent;
       border-radius: 0;

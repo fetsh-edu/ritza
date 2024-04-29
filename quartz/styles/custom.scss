@@ -174,7 +174,11 @@ article.card {
     }
 }
 article {
+    a.internal {
+        all: revert;
+    }
     a.external {
+        all: revert;
         &:after {
             display: inline-block;
             content: "⎋";
