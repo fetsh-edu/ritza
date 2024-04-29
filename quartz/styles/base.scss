@@ -129,6 +129,7 @@ article {
   & ol,
   & blockquote,
   & figure > figcaption,
+  figure.bounded,
   section.footnotes,
   .constraint {
     max-width: $pageWidth;

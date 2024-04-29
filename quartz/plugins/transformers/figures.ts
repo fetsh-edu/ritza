@@ -5,7 +5,9 @@ import { Root as MarkDownRoot } from "mdast";
 
 const calloutRegex = new RegExp(/^\[!(figure)]([+-]?)/)
 const isImage = (ec : ElementContent) => { return ec.type == "element" && ec.tagName == "img"};
-const isFigure = (ec : ElementContent) => { return ec.type == "raw" && ec.value.includes('<div class="callout-title-inner"><p>Figure</p></div>') }
+// const isFigure = (ec : ElementContent) => { return ec.type == "raw" && ec.value.includes('<div class="callout-title-inner"><p>Figure</p></div>') }
+const figureRegex = /<div class="callout-title-inner"><p>([\w\s]+)<\/p><\/div>/;
+const isFigure = (ec : ElementContent) => { return ec.type == "element" && ec.properties['data-callout'] == "figure" }
 export const Figures: QuartzTransformerPlugin = () => {
     return {
         name: "ImageToFigureProcessing",
@@ -19,7 +21,15 @@ export const Figures: QuartzTransformerPlugin = () => {
                             "element",
                             node => {
                                 if (node.tagName == "blockquote") {
-                                    if (isFigure(node.children[1])) {
+                                    if (isFigure(node)) {
+                                        let className = "bounded"
+                                        if (node.children[1].type == "raw") {
+                                            const match = node.children[1].value.match(figureRegex)
+                                            if (match && match[1] !== "Figure") {
+                                                className = match[1]
+                                            }
+                                        }
+
                                         let firstPWithImage : ElementContent | undefined;
                                         let otherElements : ElementContent[] = [];
                                         const elements = node.children.filter((ch) => ch.type == "element")
@@ -51,7 +61,7 @@ export const Figures: QuartzTransformerPlugin = () => {
                                                 node.tagName = "figure"
                                                 node.children = [image, caption]
                                                 node.properties = {
-                                                    className: "constrained"
+                                                    className: className
                                                 }
                                             }
                                         }
@@ -83,6 +93,9 @@ export const Figures: QuartzTransformerPlugin = () => {
                                             children: notImages
                                         }
                                         node.tagName = "figure"
+                                        node.properties = {
+                                            className: "bounded"
+                                        }
                                         node.children = [firstImage, caption]
                                     }
                                 }
