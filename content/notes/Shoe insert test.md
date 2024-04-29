@@ -16,9 +16,9 @@ created: 2023-08-24 23:00
 За полгода с прошлого теста у меня добавились:
 1. Еще одна модель Saucony Kinvara, более новая,
 2. Vivobarefoot,
-3. Сандалии Adama,
+3. [[shorts/adama-zuzu|Сандалии Adama]],
 4. Saucony Hurricane, достал из старых запасов,
-5. Сандалии Zuzu,
+5. [[shorts/adama-zuzu|Сандалии Zuzu]],
 6. Синяки под ногтями от стартовых Adidas Adios PRO.
 
 ![[Attachments/Insert-Kinvara-2.jpg]]
