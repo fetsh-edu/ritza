@@ -20,6 +20,7 @@ import MobileOnly from "./MobileOnly"
 import RecentNotes from "./RecentNotes"
 import Breadcrumbs from "./Breadcrumbs"
 import Logo from "./Logo"
+import JSControls from "./JSControls";
 
 export {
   ArticleTitle,
@@ -43,5 +44,6 @@ export {
   RecentNotes,
   NotFound,
   Breadcrumbs,
-  Logo
+  Logo,
+  JSControls
 }

@@ -35,4 +35,9 @@ header {
             width: 50px;
         }
     }
+    & > .with-css {
+        width: 17.5rem;
+        display: flex !important;
+        align-items: center;
+    }
 }

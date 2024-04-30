@@ -8,8 +8,7 @@ export const sharedPageComponents: SharedLayout = {
   header: [
       Component.Logo(),
       Component.PageTitle(),
-      Component.Search(),
-      Component.Darkmode(),
+      Component.JSControls({children: [Component.Search(), Component.Darkmode()]})
   ],
   footer: Component.Footer({
     links: {

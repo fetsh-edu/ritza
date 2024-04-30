@@ -452,7 +452,7 @@ hr {
         position: absolute;
         top: -0.6rem;
         width: 100px;
-        left: ($pageWidth * 0.4) / 2 - 50px;
+        left: calc(($pageWidth * 0.4) / 2 - 50px);
     }
 }
 

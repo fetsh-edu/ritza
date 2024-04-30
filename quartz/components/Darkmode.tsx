@@ -20,6 +20,7 @@ const Darkmode: QuartzComponent = ({ displayClass, cfg }: QuartzComponentProps) 
           x="0px"
           y="0px"
           viewBox="0 0 35 35"
+          width="20px" height="20px"
           style="enable-background:new 0 0 35 35"
           xmlSpace="preserve"
         >
@@ -36,6 +37,7 @@ const Darkmode: QuartzComponent = ({ displayClass, cfg }: QuartzComponentProps) 
           x="0px"
           y="0px"
           viewBox="0 0 100 100"
+          width="20px" height="20px"
           style="enable-background:new 0 0 100 100"
           xmlSpace="preserve"
         >
