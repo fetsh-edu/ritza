@@ -433,11 +433,27 @@ p > img + em {
 }
 
 hr {
-  width: 100%;
-  margin: 2rem auto;
-  height: 1px;
-  border: none;
-  background-color: var(--lightgray);
+    width: $pageWidth * 0.4;
+    margin: 2rem auto;
+    height: 1px;
+    border: none;
+    background-color: var(--lightgray);
+    padding: 0;
+    overflow: visible;
+    text-align: center;
+    position: relative;
+    &:after {
+        content: "* * *";
+        background: var(--light);
+        margin: 0;
+        padding: 0;
+        font-size: 1em;
+        display: inline-block;
+        position: absolute;
+        top: -0.6rem;
+        width: 100px;
+        left: ($pageWidth * 0.4) / 2 - 50px;
+    }
 }
 
 audio,
