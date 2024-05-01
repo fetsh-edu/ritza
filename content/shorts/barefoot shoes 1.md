@@ -6,7 +6,8 @@ tags:
 enableToc: false
 created: 2024-04-28 17:43:36
 image: /Attachments/zuzu-run-1.jpg
-imageAlt: ""
+imageAlt: 
+description: Я пробежал в босоногих сандалиях 50 миль, и вот что со мной стало...
 ---
 Я пробежал в босоногих сандалиях 50 миль, и вот что со мной стало...
 

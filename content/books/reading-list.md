@@ -2,6 +2,7 @@
 title: Reading list
 enableToc: false
 created: 2023-09-05 14:24
+noindex: true
 ---
 ## Past
 

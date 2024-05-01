@@ -5,5 +5,6 @@ tags:
 enableToc: false
 created: <% tp.file.last_modified_date("YYYY-MM-DD HH:mm:ss") %>
 image: ""
-imageAlt: ""
+description: 
+aliases:
 ---

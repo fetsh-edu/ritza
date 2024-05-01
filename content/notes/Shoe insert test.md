@@ -4,6 +4,7 @@ tags:
   - shoes
 enableToc: false
 created: 2023-08-24 23:00
+description: Джей Дичарри в своей книге «Анатомия для бегунов» рекомендует перед покупокой новой обуви проверять, что она проходит «тест на стельку». Описание теста и результаты из моей галошницы.
 ---
 Тест из книги [[books/Jay Dicharry - Anatomy for Runners|Jay Dicharry - Anatomy for Runners]]: 
 
