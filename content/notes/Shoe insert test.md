@@ -14,7 +14,9 @@ description: Джей Дичарри в своей книге «Анатомия
 
 ### April 2024
 
-За полгода с прошлого теста у меня добавились:
+У Peter Attia в подкасте была на днях ступневая спцециалистка ([Courtney Conley is an internationally renowned foot and gait specialist](https://peterattiamd.com/courtneyconley/)), которая опять нам рассказала, что обувь должна быть обязательно с широким носком. И процитировала этот «тест на стельку». Поэтому я решил обновить свои тесты.
+
+За полгода с [[notes/Shoe insert test#August 2023|прошлого теста]] у меня добавились:
 1. Еще одна модель Saucony Kinvara, более новая,
 2. Vivobarefoot,
 3. [[shorts/adama-zuzu|Сандалии Adama]],
@@ -36,7 +38,8 @@ description: Джей Дичарри в своей книге «Анатомия
 4. Asics Evoride
 5. Altra Torin
 
-![[Attachments/Insert-Rider.jpg]]![[Attachments/Insert-Pegasus.jpg]]
+![[Attachments/Insert-Rider.jpg]]
+![[Attachments/Insert-Pegasus.jpg]]
 ![[Attachments/Insert-Kinvara.jpg]]
 ![[Attachments/Insert-Evoride.jpg]]
 ![[Attachments/Insert-Altra.jpg]]
